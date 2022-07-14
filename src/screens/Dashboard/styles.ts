@@ -11,13 +11,13 @@ export const Header = styled.View`
     width: 100%;
     height: ${RFPercentage(42)}px;
     background-color: ${({ theme }) => theme.colors.primary};
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 `;
 
 export const UserWrapper = styled.View`
     width: 100%;
-    padding: 0 24px;
+    padding: 42px 24px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -53,4 +53,14 @@ export const UserName = styled.Text`
 export const Icon = styled(Feather)`
     color: ${({ theme }) => theme.colors.secundary};
     font-size: ${RFValue(24)}px;
+`;
+
+export const HighlightCards = styled.ScrollView.attrs({
+    horizontal: true,
+    showHorizontalScrollIndicator: false,
+    contentContainerStyle: {paddingHorizontal: 24}
+})`
+    width: 100%;
+    position: absolute;
+    margin-top: ${RFPercentage(20)}px;
 `;
